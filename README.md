@@ -1,4 +1,4 @@
-# LPI Practice Exam
+# LPIC1 101-500 Practice Exam
 
 This is a simple static HTML-based practice exam for the Linux Professional Institute (LPI) certification. The first question is implemented with more to be added.
 
