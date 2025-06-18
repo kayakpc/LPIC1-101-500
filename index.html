@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LPI Practice Exam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0c0c1e;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: #1f1f3a;
+      border-radius: 12px;
+      padding: 24px;
+      width: 90%;
+      max-width: 600px;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+    }
+    .question {
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 12px;
+      background-color: #2b2b50;
+      padding: 12px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button {
+      background-color: #5555ff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 16px;
+    }
+    button:hover {
+      background-color: #4444dd;
+    }
+    footer {
+      margin-top: 30px;
+      color: #ccc;
+      font-size: 14px;
+      text-align: center;
+    }
+    footer a {
+      color: #ff69b4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>LPI Practice Exam</h1>
+    <p style="text-align:center;">Made with ❤️</p>
+    <div class="question">
+      <p><strong>Question 1 of 80</strong></p>
+      <p>What are the differences between hard disk drives and solid state disks? (Choose two.)</p>
+      <form id="quizForm">
+        <label><input type="checkbox" name="q1" value="1"> Solid state disks provide faster access to stored data than hard disks.</label>
+        <label><input type="checkbox" name="q1" value="2"> Hard disks have a motor and moving parts, solid state disks do not.</label>
+        <label><input type="checkbox" name="q1" value="3"> Solid state disks can store many times as much data as hard disk drives.</label>
+        <label><input type="checkbox" name="q1" value="4"> Hard disks can fail due to physical damage, while solid state disks cannot fail.</label>
+        <label><input type="checkbox" name="q1" value="5"> /dev/sda is a hard disk device while /dev/ssda is a solid state disk.</label>
+        <button type="button" onclick="checkAnswer()">Submit Answer</button>
+      </form>
+    </div>
+    <footer>
+      Enjoying this tool? <a href="#">Consider sponsoring the project</a>. ❤️
+    </footer>
+  </div>
+
+  <script>
+    function checkAnswer() {
+      const selected = [...document.querySelectorAll('input[name="q1"]:checked')].map(cb => cb.value);
+      const correct = ["1", "2"];
+      const isCorrect = selected.length === 2 && selected.every(v => correct.includes(v));
+      alert(isCorrect ? "Correct!" : "Incorrect. Please try again.");
+    }
+  </script>
+</body>
+</html>
