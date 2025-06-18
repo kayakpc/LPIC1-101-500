@@ -10,7 +10,6 @@ This is a simple static HTML-based practice exam for the Linux Professional Inst
 
 ## Preview
 
-![Screenshot](screenshot.png)
 
 ## Contributing
 
